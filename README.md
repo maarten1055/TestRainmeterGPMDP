@@ -19,7 +19,8 @@ MeterAlbumName=MeterAlbum
 Measure=Script
 ScriptFile="#CURRENTPATH#GPMDPJson.lua"
 
-; Change this path to your playback-information, this should be the same location except with a different user ofcourse. So "Maart" should be your username
+; Change this path to your playback-information, 
+; this should be the same location except with a different user ofcourse. So "Maart" should be your username
 FileToRead="D:\Users\maart\AppData\Roaming\GPMDP\playback-information.json"
 JSONParser="#CURRENTPATH#JSON.lua"
 UpdateDivider=1
