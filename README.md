@@ -32,3 +32,4 @@ Download=1
 DynamicVariables=1
 DownloadFile=image1.jpg
 ```
+- Use MeasureImageDownload as the measure for your album cover
