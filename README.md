@@ -12,16 +12,19 @@ To use this in your own skins:
 MeterTitleName=MeterTitle
 MeterArtistName=MeterArtist
 MeterAlbumName=MeterAlbum
+MeterTotalTime=MeterLength
+MeterCurrentTime=MeterPosition
 ```
+If your skin does not use one of these meter just leave it out.
+
 - Copy these measures from GPMDPTest.ini:
 ```
 [MeasureLuaScript]
 Measure=Script
 ScriptFile="#CURRENTPATH#GPMDPJson.lua"
-
 ; Change this path to your playback-information, 
 ; this should be the same location except with a different user ofcourse. So "Maart" should be your username
-FileToRead="D:\Users\maart\AppData\Roaming\GPMDP\playback-information.json"
+FileToRead="D:\Users\maart\AppData\Roaming\GPMDP_STORE\playback.json"
 JSONParser="#CURRENTPATH#JSON.lua"
 UpdateDivider=1
 
@@ -32,5 +35,10 @@ url=#CoverUrl#
 Download=1
 DynamicVariables=1
 DownloadFile=image1.jpg
+
+[MeasureCalcProgress]
+Measure=Calc
+Formula=#CurrentTime# / #TotalTime#
 ```
 - Use MeasureImageDownload as the measure for your album cover
+- Use MeasureCalcProgress as the measure for the time
